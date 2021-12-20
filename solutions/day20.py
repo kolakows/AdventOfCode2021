@@ -20,11 +20,9 @@ def filter(win, alg):
 
 pad_symbol = '0'
 img = np.array(img)
-rel_size = img.shape
 pad_size = 2
 
 for k in range(50):
-    img_shape = img.shape
     img = np.pad(img, pad_size, constant_values=pad_symbol)
     transformed = img.copy()
     for i in range(1, img.shape[0] - 1):
